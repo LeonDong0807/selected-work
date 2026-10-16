@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f4f3f0">
+  <title>網站設計作品｜Leon Dong</title>
+  <style>
+    :root {
+      --bg: #f4f3f0;
+      --ink: #1b1b19;
+      --muted: #5c5b57;
+      --line: rgba(27, 27, 25, .18);
+      --sans: "PingFang TC", "Noto Sans TC", "Microsoft JhengHei", sans-serif;
+      --mono: "SF Mono", ui-monospace, "Menlo", monospace;
+      --gutter: clamp(20px, 4.5vw, 64px);
+    }
+    * { box-sizing: border-box; }
+    body { margin: 0; background: var(--bg); color: var(--ink); font-family: var(--sans); -webkit-font-smoothing: antialiased; overflow-x: clip; }
+    a { color: inherit; }
+    h1, h2, p, figure { margin: 0; }
+    img { display: block; max-width: 100%; }
+    :focus-visible { outline: 2px solid var(--ink); outline-offset: 3px; }
+
+    .head {
+      max-width: 1320px; margin: 0 auto;
+      padding: clamp(36px, 6vw, 80px) var(--gutter) clamp(28px, 4vw, 48px);
+      display: flex; flex-wrap: wrap; align-items: end; justify-content: space-between; gap: 16px 40px;
+      border-bottom: 1px solid var(--ink);
+    }
+    .head h1 { font-size: clamp(26px, 3vw, 40px); font-weight: 500; letter-spacing: .04em; }
+    .head p { color: var(--muted); font-size: 14px; line-height: 1.8; }
+    .head .code { font-family: var(--mono); font-size: 12.5px; letter-spacing: .04em; }
+
+    .pair {
+      max-width: 1320px; margin: 0 auto;
+      padding: clamp(32px, 4vw, 56px) var(--gutter) clamp(56px, 7vw, 96px);
+      display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: clamp(28px, 4vw, 64px);
+    }
+    .entry { display: grid; grid-template-rows: auto auto 1fr auto; gap: 18px; }
+    .entry__img { display: block; overflow: hidden; background: #e6e3dc; }
+    .entry__img img { width: 100%; height: auto; transition: transform .5s ease; }
+    .entry__img:hover img { transform: scale(1.015); }
+    .entry--pilatique .entry__img { background: #e7dfd3; }
+    .entry--pilatique .entry__img img { aspect-ratio: 4 / 3; object-fit: cover; object-position: 50% 42%; }
+    .entry--hourstack .entry__img { background: #e7dfd4; display: grid; place-items: center; aspect-ratio: 4 / 3; }
+    .entry--hourstack .entry__img img { width: min(82%, 520px); }
+    .entry h2 { font-size: clamp(20px, 1.8vw, 24px); font-weight: 500; letter-spacing: .04em; }
+    .entry h2 small { display: block; margin-top: 6px; color: var(--muted); font-size: 13px; font-weight: 400; letter-spacing: .06em; }
+    .entry p { color: #3a3936; font-size: 14.5px; line-height: 1.85; }
+    .entry__links { display: flex; flex-wrap: wrap; gap: 12px; }
+    .btn {
+      display: inline-flex; align-items: center; min-height: 46px; padding: 0 18px;
+      border: 1px solid var(--ink); font-size: 14px; letter-spacing: .08em; text-decoration: none;
+    }
+    .btn--solid { background: var(--ink); color: var(--bg); }
+    .btn--solid:hover { background: #3a3936; }
+    .btn:not(.btn--solid):hover { background: #fff; }
+    .btn small { margin-left: 8px; color: var(--muted); font-size: 11.5px; }
+
+    .foot {
+      max-width: 1320px; margin: 0 auto;
+      padding: 20px var(--gutter) 32px;
+      border-top: 1px solid var(--line);
+      color: var(--muted); font-size: 12.5px; line-height: 1.8; letter-spacing: .04em;
+    }
+
+    @media (max-width: 760px) {
+      .pair { grid-template-columns: minmax(0, 1fr); }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .entry__img img { transition: none; }
+    }
+  </style>
+  <meta name="robots" content="noindex,nofollow">
+</head>
+<body>
+  <header class="head">
+    <div>
+      <h1>網站設計作品</h1>
+      <p>品牌介紹與商品展示，兩種不同的設計方向。</p>
+    </div>
+  </header>
+
+  <main class="pair">
+    <article class="entry entry--pilatique">
+      <a class="entry__img" href="pilatique.html" tabindex="-1" aria-hidden="true">
+        <img src="./senior-motion.jpg" width="1080" height="1370" alt="">
+      </a>
+      <h2>PILATIQUE 品牌介紹頁<small>直書、直式影像、暖紙與深墨</small></h2>
+      <p>以宋體直排標題與原比例 9:16 動作影像為主軸，放慢閱讀節奏；團體課與私人課以兩張空間照片錯位並置。三段影片一次只播一段，可暫停、開聲音，減少動態偏好下不自動播放。</p>
+      <p class="entry__links">
+        <a class="btn btn--solid" href="pilatique.html">查看作品</a>
+      </p>
+    </article>
+
+    <article class="entry entry--hourstack">
+      <a class="entry__img" href="hourstack.html" tabindex="-1" aria-hidden="true">
+        <img src="./5D3C719B-2F21-400F-98CD-6BE4C067C456.jpg" width="640" height="480" alt="">
+      </a>
+      <h2>Hourstack｜ROLEX Datejust 41 商品頁<small>錶商目錄卡、錶盒綠、精確的數字</small></h2>
+      <p>把頁面當成一張錶商目錄卡：奶油色襯墊舞台承接六張實拍（不超過原始 640×480 顯示），型號用等寬字、尺寸與價格用 Didot 數字，規格依識別／外觀／機芯分組。價格旁直接標示原示範快照說明，不提供購買或預約流程。</p>
+      <p class="entry__links">
+        <a class="btn btn--solid" href="hourstack.html">查看作品</a>
+      </p>
+    </article>
+  </main>
+
+  <footer class="foot">
+    宥均 Leon Dong｜自主設計作品。品牌圖片與影片沿用既有公開素材；商品價格與供應狀態以店家確認為準。
+  </footer>
+</body>
+</html>
